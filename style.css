@@ -1,0 +1,108 @@
+*,
+*:before,
+*:after{
+    padding: 0;
+    margin: 1%;
+    margin-left: 5%;
+    box-sizing: border-box;
+    border-color: #0F62FE;
+}
+body{
+    height: 100vh;
+    background: #0F62FE;
+}
+#head-text{
+    margin-top: 7%;
+    margin-left: 35%;
+    font-family: sans-serif;
+    color: #0F62FE;
+}
+.container{
+    width: 40%;
+    background: white;
+    border-radius:1px;
+    min-width: 500px;
+    min-height: 300px;
+    border: 2px solid #000000; 
+    margin:  4% 25% auto ;  /* t, r, b, l */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
+    padding: 20px;
+}
+.tasks.overflow{
+    overflow: auto;
+    max-height: 300px;
+}
+.tasks::-webkit-scrollbar {
+ width: 10px;
+}
+.tasks::-webkit-scrollbar-track {
+ background: #BAE6FF;
+ border-radius: 25px;
+}
+.tasks::-webkit-scrollbar-thumb {
+    background: #0075EC;
+    border-radius: 25px;
+}
+.checked {
+  text-decoration: line-through;
+  color: gray;
+}
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f0f0f0;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.task label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-grow: 1;
+}
+
+.task p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.delete {
+  cursor: pointer;
+  font-size: 20px;
+  color: #ff5c5c;
+}
+
+#newtask {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 20px;
+}
+
+#newtask input {
+  flex: 1;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #0F62FE;
+  border-radius: 4px;
+}
+
+#newtask button {
+  padding: 8px 16px;
+  background-color: #0F62FE;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.task {
+  transition: all 0.3s ease;
+}
+@media (max-width: 600px) {
+  .container {
+    margin-top: 40px;
+  }
+}
